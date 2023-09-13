@@ -1,0 +1,18 @@
+.container {
+  width: 600px;
+  margin: 20px auto;
+}
+
+.container h3{
+  font-size: xx-large;
+}
+
+.container h4{
+  font-size: x-large;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  margin-left: 34%;
+  margin-top: 8%;
+}

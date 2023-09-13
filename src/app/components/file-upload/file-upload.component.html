@@ -1,0 +1,54 @@
+<div>
+  <mat-form-field>
+    <div>
+      <mat-toolbar *ngFor="let file of files ">
+        <input matInput [value]="file.name"/>
+
+        <div *ngIf="checkIfFilesExists()">
+           <span  class="material-icons">
+        attach_file
+        </span>
+          <span (click)="removeItem(file)" class="material-icons">
+        delete_outline
+        </span>
+        </div>
+
+      </mat-toolbar>
+
+      <input
+        type="file"
+        multiple="multiple"
+        id="fileInput"
+        (change)="selectFile($event)"
+        name="fileInput"
+      />
+    </div>
+  </mat-form-field>
+</div>
+
+<button
+  matBadge="{{checkIfFilesExists()? files.length : 0  }}" matBadgePosition="before" matBadgeColor="accent"
+  mat-flat-button
+  color="primary"
+  [disabled]="!checkIfFilesExists() "
+  (click)="upload()"
+>
+  Upload
+</button>
+&nbsp;
+<button
+  (click)="removeAllItems()"
+  mat-flat-button
+  color="primary"
+  [disabled]="!checkIfFilesExists() "
+
+>
+  remove items
+</button>
+
+<br />
+<br />
+
+
+
+
