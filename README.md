@@ -1,3 +1,12 @@
+# Versions
+
+`Node:` v14.15.0
+
+`Npm:` v6.14.8
+
+
+
+
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
